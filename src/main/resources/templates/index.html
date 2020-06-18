@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http//www.thymeleaf.org" >
+<head>
+
+    <meta charset="UTF-8">
+    <title>login page</title>
+</head>
+<body>
+
+
+<form action="#" th:action="@{/adminLogin}" th:object="${loginData}" method="post">
+    <label>
+    email:
+    <input type="text" th:field="*{email}"  id="email" name="email"><br><br>
+    </label>
+    <label>
+    password:
+    <input  type="text" th:field="*{password}"  id="password" name="password"><br><br>
+    </label>
+    <input type="submit" value="Submit">
+</form>
+
+<form action="#" th:action="@{/librarianLogin}" th:object="${loginData}" method="post">
+    <label>
+        email:
+        <input type="text" th:field="*{email}"  id="librarianEmail"><br><br>
+    </label>
+    <label>
+        password:
+        <input  type="text" th:field="*{password}"  id="librarianpassword" ><br><br>
+    </label>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+</body>
+</html>
